@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: float = 150.0
+@export var speed: float = 100.0
 @export var max_health: int = 100
 
 var health: int
@@ -27,3 +27,11 @@ func take_damage(damage: int) -> void:
 
 func destroy() -> void:
     queue_free()
+
+func _on_area_entered(area: Area2D) -> void:
+    if area.is_in_group("bullet"):
+        if "damage" in area:
+            take_damage(area.damage)
+        else:
+            destroy()
+        area.queue_free()

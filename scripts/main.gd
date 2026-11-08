@@ -13,7 +13,3 @@ func _process(delta: float) -> void:
 		spawner_timer = 0
 		var enemy_instance = enemy_scene.instantiate()
 		add_child(enemy_instance)
-	# chek bullet enter in  body of enemy
-
-	
-

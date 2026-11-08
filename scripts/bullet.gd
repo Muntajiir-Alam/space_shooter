@@ -1,13 +1,14 @@
 extends Area2D
 
-var speed: float = 400.0
+@export var speed: float = 400.0
+@export var damage: int = 100
 
 func _ready() -> void:
-	pass # Replace with function body.
+	add_to_group("bullet")
 
 
 func _process(delta: float) -> void:
 	position.y -= speed * delta
 	if position.y <= 0:
 		queue_free()
-	pass
+
