@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cw5eekjepuohr"]
+
+[ext_resource type="Script" uid="uid://ddb880ne1qwwb" path="res://scripts/main.gd" id="1_0bbpv"]
+[ext_resource type="Texture2D" uid="uid://ducr4ifqheld6" path="res://assets/backround/black.png" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://cxy6drdknt6lq" path="res://scenes/Player.tscn" id="2_rvslj"]
+
+[node name="Main" type="Node2D" unique_id=1244922894]
+script = ExtResource("1_0bbpv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=921897060]
+position = Vector2(574, 328)
+scale = Vector2(4.8125, 2.7382813)
+texture = ExtResource("1_elqb8")
+
+[node name="Player" parent="." unique_id=1014371077 instance=ExtResource("2_rvslj")]
+position = Vector2(573, 557)
+
+[node name="bullets" type="Node2D" parent="." unique_id=115734341]

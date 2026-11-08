@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://roro4dm8hotl"]
+
+[ext_resource type="Script" uid="uid://c118e06xyhvye" path="res://scripts/enemy.gd" id="1_3gvst"]
+[ext_resource type="Texture2D" uid="uid://ds6euy2i84d8c" path="res://assets/enemy/enemyBlack1.png" id="2_55jtl"]
+
+[node name="Enemy" type="Area2D" unique_id=986886546]
+script = ExtResource("1_3gvst")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=228308773]
+
+[node name="EnemyBlack1" type="Sprite2D" parent="." unique_id=1945101034]
+texture = ExtResource("2_55jtl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1793876801]
+polygon = PackedVector2Array(-32, -40, -32, -40, -8, -32, -8, -24, 8, -24, 8, -32, 24, -40, 32, -40, 32, -32, 48, -16, 24, 40, 16, 40, 8, 32, 16, 16, -16, 16, -8, 32, -16, 40, -24, 40, -48, -16, -32, -40, -32, -40, -32, -40)
